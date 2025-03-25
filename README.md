@@ -1,11 +1,11 @@
 
 # **Holberton School C#26 Project _printf**
 
-### A brief description �~_~S~\
+### A brief description 💻
 
 The `_printf` project is a redesign of the printf function from the C standard library. This function allows you to display formatted data to standard output `<stdio.h>`, supporting various types and format specifiers. The main goal is to better understand the internals of this function while improving your skills in system programming and memory management.
   
-### Compilation command �~_~[|
+### Compilation command 📋
 
 To compile the program, use the following command:
 `gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c -o`
