@@ -37,7 +37,6 @@ int _printf(const char *format, ...)
 				{
 					length += form[x].f(args);
 					find_function = 1;
-					i++;
 				}
 				x++;
 			}
@@ -59,7 +58,10 @@ int _printf(const char *format, ...)
 			length++;
 		}
 		if (find_function == 1)
+		{
 			find_function = 0;	
+			i++;
+		}
 		if (find_percent == 1)
 			find_percent = 0;
 		x = 0;
