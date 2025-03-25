@@ -6,6 +6,6 @@
  */
 int print_percent(va_list va)
 {
-	(void)va;
+	_putchar('%');
 	return 1;
 }
