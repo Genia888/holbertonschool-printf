@@ -7,5 +7,6 @@
 int print_int(va_list va)
 {
 	(void)va;
+	_putchar('0');	
 	return 1;
 }
