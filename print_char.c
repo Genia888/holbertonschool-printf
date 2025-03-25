@@ -1,11 +1,16 @@
 #include "main.h"
 /**
  * print_char - get an argument from char and display it
- *
- * Return: Length of the string display
+ * @args: arguments
+ * Return: 1 Length of the string display
  */
-int print_char(va_list va)
+
+int print_char(va_list args)
 {
-	(void)va;
-	return 1;
+	char character;
+
+	character = va_arg(args, int);
+	_putchar(character);
+
+	return (1);
 }
