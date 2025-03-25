@@ -4,7 +4,7 @@
 ## A brief description 💻
 
 The `_printf` project is a redesign of the printf function from the C standard library. This function allows you to display formatted data to standard output `<stdio.h>`, supporting various types and format specifiers. The main goal is to better understand the internals of this function while improving your skills in system programming and memory management.
-  
+
 ## Compilation command 📋
 
 To compile the program, use the following command:
@@ -20,12 +20,16 @@ All files are written with [betty style](https://www.holbertonschool.fr/post/que
 
 ## Repository files list 📚
 
-| File name | %   | Description                |
-| :-------- | :------- | :------------------------- |
-| [_printf.c](https://github.com/SebSa12000/holbertonschool-printf/blob/main/_printf.c) |  |  the main function `_printf`|
-| [_putchar.c](https://github.com/SebSa12000/holbertonschool-printf/blob/main/_putchar.c) |      | puchar command permitting to print a character              |
-| [main.c](https://github.com/SebSa12000/holbertonschool-printf/blob/main/main.c)| |                                |
-| [main.h](https://github.com/SebSa12000/holbertonschool-printf/blob/main/main.h)          |     |                          |
+| File name | Description                |
+| :-------- | :------------------------- |
+|[_printf.c](https://github.com/SebSa12000/holbertonschool-printf/blob/main/_printf.c) |  the main function `_printf`|
+|[_putchar.c](https://github.com/SebSa12000/holbertonschool-printf/blob/main/_putchar.c) | `_putchar` command permitting to print a character |
+|[main.h](https://github.com/SebSa12000/holbertonschool-printf/blob/main/main.h)          |the header file ( prototypes and structues )       |
+|[print_char.c](https://github.com/SebSa12000/holbertonschool-printf/blob/main/print_char.c)|`print_char` print the character
+|[print_int.c](https://github.com/Genia888/holbertonschool-printf/blob/main/print_int.c)|`print_int` print the integer
+|[print_percent.c](https://github.com/Genia888/holbertonschool-printf/blob/main/print_percent.c)|`print_percent` print the percent %|
+|[print_string.c](https://github.com/Genia888/holbertonschool-printf/blob/main/print_string.c)|`print_string` print the string|
+|[man_3_printf]()|  the man page of `_printf`
 
 ## Authors 👷
 
