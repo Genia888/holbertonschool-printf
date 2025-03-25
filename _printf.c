@@ -7,16 +7,36 @@
  */
 int _printf(const char *format, ...)
 {
-	to_do_struct ops[] = {
-		{"%", to_do_from_pourcent},
-		{"c", to_do_from_char},
-		{"i", to_do_from_int},
-		{"s", to_do_from_string},
-		{"d", to_do_from_int},
-		{NULL, NULL}
-	};
-	(void)ops;
-	(void)format;
-	_putchar('X');
+	type form[] = {
+                {"c", print_char},
+                {"s", print_string},
+                {"%", print_percent},
+                {"i", print_int},
+                {"d", print_int},
+                {"\0", NULL}
+        };
+
+	va_list args;
+	unsigned int i = 0;
+	unsigned int x = 0;
+
+	va_start(args, format);
+
+	while (format != NULL && format[i] != '\0')
+	{
+		while (x < 4)
+		{
+			if (format[i] == form[x].op[0])
+			{
+				form[x].f(args);
+			}
+			x++;
+		}
+		x = 0;
+		i++;
+	}
+	va_end(args);
+
+	_putchar('\n');
 	return 1;
 }
