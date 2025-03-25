@@ -19,7 +19,7 @@ int _printf(const char *format, ...)
 	va_list args;
 	unsigned int i = 0;
 	unsigned int x = 0;
-	int trouve = 0;
+	int find_function = 0;
 	int find_percent = 0;
 	int length = 0;
 
@@ -27,7 +27,6 @@ int _printf(const char *format, ...)
 
 	while (format != NULL && format[i] != '\0')
 	{
-		trouve = 0;
 		if (format[i] == '%' && format[i+1] != '\0')
 		{
 			find_percent = 1;
@@ -37,7 +36,7 @@ int _printf(const char *format, ...)
 				if (format[i+1] == form[x].op[0])
 				{
 					length += form[x].f(args);
-					trouve = 1;
+					find_function = 1;
 					i++;
 				}
 				x++;
@@ -49,22 +48,24 @@ int _printf(const char *format, ...)
 			length++;
 		}
 
-		if (trouve == 0 && find_percent == 1)
+		if (find_function == 0 && find_percent == 1)
 		{
 			_putchar('%');
 			length++;
 		}
-		else if (trouve == 0 && find_percent == 0) 
+		else if (find_function == 0 && find_percent == 0) 
 		{
 			_putchar(format[i]);
 			length++;
 		}
-		
+		if (find_function == 1)
+			find_function = 0;	
+		if (find_percent == 1)
+			find_percent = 0;
 		x = 0;
 		i++;
 	}
 	va_end(args);
 
-	_putchar('\n');
 	return length;
 }
