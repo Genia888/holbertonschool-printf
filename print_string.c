@@ -1,11 +1,25 @@
 #include "main.h"
+#include <stdarg.h>
+
 /**
- * print_string - get an argument from string and display it
+ * print_string - print the string 
+ * @args: list of arguments
  *
- * Return: Length of the string display
+ * Return: the total number of characters printed
  */
-int print_string(va_list va)
+
+int print_string(va_list args)
 {
-	(void)va;
-	return 1;
+    char *str = va_arg(args, char *);
+    int i = 0;
+
+    if (!str)
+        str = "(null)";
+
+    while (str[i]) {
+        _putchar(str[i]);
+        i++;
+    }
+
+    return i;
 }
