@@ -23,6 +23,9 @@ int _printf(const char *format, ...)
 	int find_percent = 0;
 	int length = 0;
 
+	if (format == NULL)
+		return (0);
+
 	va_start(args, format);
 
 	while (format != NULL && format[i] != '\0')
