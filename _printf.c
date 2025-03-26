@@ -39,7 +39,7 @@ int _printf(const char *format, ...)
 	unsigned int i = 0, x = 0;
 	int find_function = 0, find_percent = 0, length = 0;
 
-	if ((format == NULL) && (format[i] == '%' && format[i + 1] == '\0'))
+	if ((format == NULL) || (format[i] == '%' && format[i + 1] == '\0'))
 		return (-1);
 	va_start(args, format);
 	while (format != NULL && format[i] != '\0')
