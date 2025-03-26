@@ -4,7 +4,7 @@
 ## A brief description 💻
 
 The `_printf` project is a redesign of the printf function from the C standard library. This function allows you to display formatted data to standard output `<stdio.h>`, supporting various types and format specifiers. The main goal is to better understand the internals of this function while improving your skills in system programming and memory management.
-  
+
 ## Compilation command 📋
 
 To compile the program, use the following command:
