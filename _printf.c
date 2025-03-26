@@ -33,7 +33,7 @@ int _printf(const char *format, ...)
 		if (format[i] == '%' && format[i+1] != '\0')
 		{
 			find_percent = 1;
-			while (x < 5)
+			while (x < 6)
 			{
 
 				if (format[i+1] == form[x].op[0])
