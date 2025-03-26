@@ -15,7 +15,6 @@ int _printf(const char *format, ...)
 		{"d", print_int},
 		{"\0", NULL}
 	};
-
 	va_list args;
 	unsigned int i = 0;
 	unsigned int x = 0;
@@ -25,10 +24,8 @@ int _printf(const char *format, ...)
 
 	if (format == NULL)
 		return (-1);
-
 	if(format[i] == '%' && format[i+1] == '\0')
 		return(-1);
-
 	va_start(args, format);
 
 	while (format != NULL && format[i] != '\0')
@@ -65,7 +62,7 @@ int _printf(const char *format, ...)
 		}
 		if (find_function == 1)
 		{
-			find_function = 0;	
+			find_function = 0;
 			i++;
 		}
 		if (find_percent == 1)

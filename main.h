@@ -3,7 +3,7 @@
 #include <stdarg.h>
 #include <stddef.h>
 int _putchar(char c);
-int _printf(const char* format, ...);
+int _printf(const char *format, ...);
 int print_int(va_list va);
 int print_percent(va_list va);
 int print_char(va_list va);
