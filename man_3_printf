@@ -1,1 +1,54 @@
-The man page of printf soon
+.TH _PRINTF  "March 27 2025" "Version 1.0" "Custom by Genia888"
+.SH NAME
+man_3_printf \- Custom function to print formatted text.
+.SH SYNOPSIS
+.B #include "main.h"
+.br
+.B int _printf(const char *format, ...);
+.SH DESCRIPTION
+The function
+.B man_3_printf()
+is a custom implementation of the standard printf function.
+It supports the following format specifiers:
+.TP
+.B %c
+Prints a single character.
+.TP
+.B %s
+Prints a string.
+.TP
+.B %%
+Prints a literal `%` character.
+.TP
+.B %d, %i
+Prints an integer.
+.TP
+.B %u
+Prints an unsigned integer.
+.TP
+.B %o
+Prints an unsigned integer in octal format.
+.TP
+.B %x, %X
+Prints an unsigned integer in hexadecimal (lowercase and uppercase).
+.TP
+.B %p
+Prints a memory address.
+.PP
+Unsupported format specifiers will be printed as-is.
+.SH RETURN VALUE
+Returns the number of characters printed, or -1 in case of an error.
+.SH EXAMPLE
+.EX
+#include "main.h"
+
+int main() {
+    int len = _printf("Hello %s! Your score is %d.\n", "Alice", 100);
+    _printf("Length of output: %d\n", len);
+    return 0;
+}
+.EE
+.SH AUTHOR
+Writte by Mr.Phillips, Sebastien and Genia888
+.SH SEE ALSO
+printf(3), fprintf(3), sprintf(3)
