@@ -1,54 +1,55 @@
-.TH _PRINTF  "March 27 2025" "Version 1.0" "Custom by Genia888"
+.TH _PRINTF 1 _printf\-1.0 "Mars 27 2025" "Version 1.0 custom by Genia888"
 .SH NAME
-man_3_printf \- Custom function to print formatted text.
+_printf \- Format and print data
 .SH SYNOPSIS
-.B #include "main.h"
-.br
-.B int _printf(const char *format, ...);
+_printf(const char *format, ...);
+.TP
+_printf FORMAT [ARGUMENT...]
 .SH DESCRIPTION
-The function
-.B man_3_printf()
-is a custom implementation of the standard printf function.
-It supports the following format specifiers:
+.B _printf
+is a function that formats text and writes it to standard output.
 .TP
-.B %c
-Prints a single character.
+The arguments are formatted under control of the format operand.
 .TP
-.B %s
-Prints a string.
+.BR %d ", " %i ", " %s ", " %c ", and " %%
+are the five specifiers used.
+.SH OPTION
+.B [%d] or [%i]
+to print integer in base 10.
 .TP
-.B %%
-Prints a literal `%` character.
+.B [%s]
+to print a string.
 .TP
-.B %d, %i
-Prints an integer.
+.B [%c]
+to print a single character
 .TP
-.B %u
-Prints an unsigned integer.
-.TP
-.B %o
-Prints an unsigned integer in octal format.
-.TP
-.B %x, %X
-Prints an unsigned integer in hexadecimal (lowercase and uppercase).
-.TP
-.B %p
-Prints a memory address.
+.B [%%]
+to print a % character alone.
+.SH EXAMPLES
+.B With main.c we can test our functions:
 .PP
-Unsupported format specifiers will be printed as-is.
-.SH RETURN VALUE
-Returns the number of characters printed, or -1 in case of an error.
-.SH EXAMPLE
-.EX
 #include "main.h"
-
-int main() {
-    int len = _printf("Hello %s! Your score is %d.\n", "Alice", 100);
-    _printf("Length of output: %d\n", len);
-    return 0;
-}
-.EE
-.SH AUTHOR
-Writte by Mr.Phillips, Sebastien and Genia888
-.SH SEE ALSO
-printf(3), fprintf(3), sprintf(3)
+.PP
+_printf("Character:[%c]\n", 'H');
+.PP
+Output: character: H
+.PP
+_printf("String:[%s]\n", "I am a string !");
+.PP
+ Output: string: I am s string !
+.PP
+_printf("Percent:[%%]\n");
+.PP
+Output: percent: %
+.PP
+_printf("integer: %i\n", 10);
+.PP
+Output: integer: 10
+.PP
+_printf("decimal: %d\n", 100);
+.PP
+Output: decimal: 100
+.B Return value
+On success, _printf returns the number of printed characters. If formats is error or NULL returns -1
+.SH AUHTORS
+Writte by Mr Phillips, Sebastien and Genia888
