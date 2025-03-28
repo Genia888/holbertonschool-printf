@@ -77,7 +77,7 @@ Here is the flowchart from which we have to create our code⤵️
     flowchart TD
     A["_printf(format,...)"] --->B{"if  Format=NULL"}
     B -- YES --> I("END Return -1")
-    B -- NO --> C("Read Format char")
+    B --- NO --> C("Read Format char")
     C ---> D{Test '%c'} 
     C ---> E{Test '%s' } 
     C ---> F{Test '%d'}  
