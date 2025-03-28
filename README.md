@@ -89,7 +89,7 @@ flowchart TD
     J -- YES --> 4(print 'int')
     K -- YES --> 5(print 'percent')
     1 & 2 & 3 & 4 & 5 --> M(print char ++i)
-    B --- M
+    B === M
 ```
 ## Authors👷‍♂️
 
