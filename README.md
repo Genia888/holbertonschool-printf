@@ -31,7 +31,7 @@ All files are written with [betty style](https://www.holbertonschool.fr/post/que
 ## Example 📍
 Here is an example to better understand⤵️
 
-```javascript
+```c
 #include <stdio.h>
 #include <string.h>
 #include "main.h"
@@ -45,8 +45,8 @@ _printf("have %i at a test is the same to say i have %c\n", 80, 'B');
 _printf("let's go for 100 %%\n"); return(0);
 }
 ```
-Output ⤵️
-```javascript
+Output ⤵�
+```bash
 Mission Control to Spacecraft:
 We have 8 planets in view
 Current target: Mars
