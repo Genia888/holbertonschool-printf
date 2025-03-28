@@ -38,11 +38,13 @@ Here is an example to better understand⤵️
 
 int main(void)
 {
-_printf("hello everynyan\n");
-_printf("i have %d apples\n",5);
-_printf("my name is %s\n", "lancelot");
-_printf("have %i at a test is the same to say i have %c\n", 80, 'B');
-_printf("let's go for 100 %%\n"); return(0);
+_printf("Mission Control to Spacecraft:\n");
+_printf("We have %d planets in view\n", 8);
+_printf("Current target: %s\n", "Mars");
+_printf("Fuel at %i%%, engine status: %c\n", 65, 'G');
+_printf("All systems at 100%%\n");
+_printf("Commencing countdown...\n");
+return (0);
 }
 ```
 Output⤵️
