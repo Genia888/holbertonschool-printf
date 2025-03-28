@@ -76,21 +76,18 @@ Here is the flowchart from which we have to create our code⤵️
 ```mermaid
 flowchart TD
     A["_printf(format,...)"] 
-    A--->B{"if format=NULL"}
-    B -- YES --> I("END Return -1")
-    B -- NO ---> C("Read format char")
-    C ---> D{Test '%c'}
-    C ---> E{Test '%s' }
-    C ---> F{Test '%d'}
-    C ---> J{Test '%i'}
-    C ---> K{Test '%%'}
-    D -- YES --> 1(print 'char')
-    E -- YES --> 2(print 'string')
-    F -- YES --> 3(print 'int')
-    J -- YES --> 4(print 'int')
-    K -- YES --> 5(print 'percent')
-    1 & 2 & 3 & 4 & 5 ---> M(print char ++i)
-    B---M
+    A--->B{"format == NULL ?"}
+    B -- YES --> I["Return -1 (Error)"]
+    B -- NO ---> C["Read a character from format"]
+    
+    C -->|'%c'| D["Print a character"]
+    C -->|'%s'| E["Print a string"]
+    C -->|'%d'| F["Print an integer"]
+    C -->|'%i'| J["Print an integer"]
+    C -->|'%%'| K["Print '%'"]
+    
+    D & E & F & J & K --> M["Move to next character (++i)"]
+    M --> B
 ```
 ## Authors👷‍♂️
 
