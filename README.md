@@ -74,15 +74,15 @@ Commencing countdown...
 
 Here is the flowchart from which we have to create our code⤵️
 ```mermaid
-    flowchart TD
+flowchart TD
     A["_printf(format,...)"] --->B{"if  Format=NULL"}
     B -- YES --> I("END Return -1")
-    B --- NO --> C("Read Format char")
-    C ---> D{Test '%c'} 
-    C ---> E{Test '%s' } 
-    C ---> F{Test '%d'}  
-    C ---> J{Test '%i'}  
-    C ---> K{Test '%%'}
+    B -- NO --> C("Read Format char")
+    C --> D{Test '%c'} 
+    C --> E{Test '%s' } 
+    C --> F{Test '%d'}  
+    C --> J{Test '%i'}  
+    C --> K{Test '%%'}
     D -- YES --> 1(print 'char')
     E -- YES --> 2(print 'string')
     F -- YES --> 3(print 'int')
