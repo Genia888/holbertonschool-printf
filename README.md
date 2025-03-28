@@ -73,36 +73,22 @@ Commencing countdown...
 Here is the flowchart from which we have to create our code ⤵️
 ```mermaid
 flowchart TD
-    A["_printf(format,...)"] e1@==>B{"if Format=NULL"}
-    B -- YES --> I("END Return -1")
-    B e2@== NO ==> C("Read Format char")
-    C e3@==> D{Test '%c'} 
-    C e4@==> E{Test '%s' } 
-    C e5@==> F{Test '%d'}  
-    C e6@==> J{Test '%i'}  
-    C e7@==> K{Test '%%'}
-    D e8@== YES ==> 1(print 'char')
-    E e9@== YES ==> 2(print 'string')
-    F e10@== YES ==> 3(print 'int')
-    J e11@== YES ==> 4(print 'int')
-    K e12@== YES ==> 5(print 'percent')
-    1 & 2 & 3 & 4 & 5 --> M(print char ++i)
+    A["_printf(format,...)"] --->B{"if Format=NULL"}
+    B --- YES ---> I("END Return -1")
+    B --- NO --> C("Read Format char")
+    C ---> D{Test '%c'} 
+    C --> E{Test '%s' } 
+    C --> F{Test '%d'}  
+    C --> J{Test '%i'}  
+    C --> K{Test '%%'}
+    D -- YES --> 1(print 'char')
+    E -- YES --> 2(print 'string')
+    F -- YES --> 3(print 'int')
+    J -- YES --> 4(print 'int')
+    K -- YES --> 5(print 'percent')
+    1 & 2 & 3 & 4 & 5 -----> M(print char ++i)
     
     B --- M
-
-    
-  e1@{ animate: true }
-  e2@{ animate: true }
-  e3@{ animate: true }  
-  e4@{ animate: true }
-  e5@{ animate: true }
-  e6@{ animate: true }
-  e7@{ animate: true }
-  e8@{ animate: true }
-  e9@{ animate: true }
-  e10@{ animate: true }
-  e11@{ animate: true }
-  e12@{ animate: true }
 ```
 ## Authors 👷
 
