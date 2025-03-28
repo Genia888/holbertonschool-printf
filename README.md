@@ -76,6 +76,7 @@ Here is the flowchart from which we have to create our code⤵️
 ```mermaid
 flowchart TD
     A["_printf(format,...)"] --->B{"if  Format=NULL"}
+    B --- M
     B -- YES --> I("END Return -1")
     B -- NO --> C("Read Format char")
     C --> D{Test '%c'} 
@@ -89,7 +90,6 @@ flowchart TD
     J -- YES --> 4(print 'int')
     K -- YES --> 5(print 'percent')
     1 & 2 & 3 & 4 & 5 --> M(print char ++i)
-    B === M
 ```
 ## Authors👷‍♂️
 
