@@ -68,7 +68,7 @@ Commencing countdown...
 |[print_int.c](https://github.com/Genia888/holbertonschool-printf/blob/main/print_int.c)|`print_int` print the integer
 |[print_percent.c](https://github.com/Genia888/holbertonschool-printf/blob/main/print_percent.c)|`print_percent` print the percent %|
 |[print_string.c](https://github.com/Genia888/holbertonschool-printf/blob/main/print_string.c)|`print_string` print the string|
-|[man_3_printf]()|  the man page of `_printf`
+|[man_3_printf](https://github.com/Genia888/holbertonschool-printf/blob/main/man_3_printf)|  the man page of `_printf`
 
 ## Flowchart📉
 
